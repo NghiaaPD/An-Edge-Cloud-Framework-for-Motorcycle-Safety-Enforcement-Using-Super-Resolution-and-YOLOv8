@@ -1,0 +1,124 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{amsmath}
+\usepackage{breqn}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[bookmarks=false]{hyperref} % Đã thêm tùy chọn bookmarks=false
+
+\begin{document}
+
+%Here goes the title
+
+\title{An Edge–Cloud Framework for Motorcycle Safety Enforcement Using Super-Resolution and YOLOv8}
+
+
+%Authors List
+\author{
+    \IEEEauthorblockN{
+        Kiet. Pham Anh, Nha. Le Trang Hoang,\\
+        Thuy. Nguyen Thi Kim, Thinh. Nguyen Cong,\\
+        Lam. Bao 
+    }
+    \IEEEauthorblockA{
+        \footnotesize
+        phamanhkiet.dev@gmail.com, 
+        nhalehoangtrang2005@gmail.com\\
+        nguyenthikimthuy1007@gmail.com,
+        nguyencongthinh17122006@gmail.com\\
+        lam01662052827@gmail.com
+    }
+}
+\maketitle
+
+
+%Main body starts
+
+\begin{abstract}
+
+This paper proposes a smart traffic monitoring framework for automatic motorcycle safety enforcement in environments with low-resolution surveillance cameras, which are common in urban and residential areas of Vietnam. To address the limitation of poor image quality, the system integrates a Super-Resolution technique using the SRCNN model directly on smart cameras, enhancing image resolution before transmission. The enhanced images are then sent to an Edge Server, where a YOLOv8-Large model is deployed to simultaneously detect motorcycles, helmets, and license plates, analyze helmet-wearing violations, and perform license plate recognition (OCR) if a violation is detected. Relevant information and images are subsequently transmitted to a Cloud Server for storage and further processing. The proposed hierarchical architecture—Smart Camera → Edge Server → Cloud Server—improves detection accuracy under low-quality input, reduces bandwidth usage, and ensures near real-time processing. This solution is practical for deployment in areas with limited technical infrastructure while maintaining effective traffic safety monitoring.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Motorcycle safety, Super-Resolution, SRCNN, YOLOv8, Helmet detection, License plate recognition, Edge computing, Cloud computing, Smart camera, Traffic monitoring.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{intro}
+
+Motorcycle safety is a critical concern in many developing countries, especially in Vietnam, where motorcycles are the primary mode of transportation and helmet use is mandated by law. Despite the existence of strict regulations, the rate of helmet-wearing violations and other traffic infractions remains high, contributing to a significant number of injuries and fatalities each year. The challenge of ensuring compliance with helmet laws is further exacerbated by the sheer volume of motorcycles on the road and the limited resources available for manual enforcement.
+
+In recent years, the deployment of surveillance cameras has become a common solution for traffic monitoring and law enforcement. However, in many urban and residential areas, these cameras are typically low-cost devices with limited resolution and image quality. Such limitations pose significant obstacles for automated systems, as traditional computer vision methods often fail to accurately detect helmet usage or recognize license plates in low-resolution footage. This results in missed violations, unreliable evidence, and ultimately reduces the effectiveness of automated enforcement solutions.
+
+Advancements in deep learning and image processing have opened new opportunities to overcome these challenges. Super-Resolution techniques, such as the SRCNN model, can enhance the quality of low-resolution images, making them more suitable for subsequent analysis. Meanwhile, state-of-the-art object detection models like YOLOv8 have demonstrated impressive performance in identifying multiple classes of objects in complex and dynamic scenes, even under challenging visual conditions.
+
+To address the aforementioned issues, this paper proposes an edge–cloud framework that leverages recent advances in deep learning and image enhancement. The system integrates a Super-Resolution technique using the SRCNN model directly on smart cameras (edge devices) to improve the quality of captured images before transmission. Enhanced images are then sent to an Edge Server, where a YOLOv8-Large model is deployed to simultaneously detect motorcycles, helmets, and license plates, analyze helmet-wearing violations, and perform license plate recognition (OCR) if a violation is detected. All relevant information and images are subsequently transmitted to a Cloud Server for storage, management, and further processing.
+
+The hierarchical architecture—Smart Camera → Edge Server → Cloud Server—offers several advantages: it improves detection accuracy under low-quality input, reduces bandwidth usage by transmitting only relevant data, and ensures near real-time processing suitable for practical deployment. This solution is particularly well-suited for areas with limited technical infrastructure, providing an effective and scalable approach to traffic safety monitoring and law enforcement. Furthermore, the modular design allows for easy adaptation and expansion as technology and infrastructure improve.
+
+In summary, our proposed framework addresses the limitations of existing systems by combining image super-resolution and advanced object detection in a distributed edge–cloud environment, enabling robust and efficient motorcycle safety enforcement in challenging real-world conditions. Through comprehensive experiments and deployment scenarios, we demonstrate that the system can significantly improve the accuracy and efficiency of traffic safety enforcement, even in environments characterized by low-resolution surveillance footage.
+
+\section{Related Work}
+\label{section2}
+
+Research on intelligent traffic monitoring and motorcycle safety enforcement has gained significant attention in recent years, especially with the advancement of computer vision and edge computing technologies. Traditional approaches to helmet detection and license plate recognition often relied on manual observation or classical image processing techniques, which were limited in scalability and accuracy, particularly under challenging conditions such as low-resolution footage.
+
+Early studies focused on rule-based and feature-based methods for helmet detection, utilizing color segmentation, shape analysis, or handcrafted features to distinguish helmets from other objects. However, these methods were highly sensitive to lighting, occlusion, and camera quality, resulting in poor generalization in real-world scenarios. Similarly, traditional license plate recognition systems depended on edge detection, morphological operations, and template matching, which struggled with low-resolution or blurred images commonly produced by inexpensive surveillance cameras.
+
+With the rise of deep learning, convolutional neural networks (CNNs) have become the dominant approach for object detection and classification tasks in traffic surveillance. Notably, models such as YOLO (You Only Look Once) and its subsequent versions (YOLOv3, YOLOv4, YOLOv5, and YOLOv8) have demonstrated remarkable performance in real-time detection of vehicles, helmets, and license plates, even in complex and dynamic environments. Several works have applied YOLO-based frameworks for helmet detection and traffic violation monitoring, achieving high accuracy and processing speed suitable for deployment on edge devices.
+
+In parallel, Super-Resolution (SR) techniques have been explored to address the challenge of low-quality surveillance footage. Early SR methods were based on interpolation or dictionary learning, but recent advances leverage deep neural networks, such as SRCNN (Super-Resolution Convolutional Neural Network), EDSR, and ESRGAN, to reconstruct high-resolution images from low-resolution inputs. Integrating SR models into traffic monitoring pipelines has been shown to enhance the performance of downstream detection and recognition tasks, particularly for small or distant objects like license plates.
+
+Edge–cloud architectures have also emerged as a promising solution for scalable and efficient traffic monitoring. By deploying lightweight models on edge devices (e.g., smart cameras) for initial processing and filtering, and offloading more complex analysis to edge servers or the cloud, these systems can reduce bandwidth usage, improve response times, and maintain privacy. Recent studies have demonstrated the effectiveness of hierarchical frameworks in various smart city applications, including vehicle detection, helmet violation analysis, and automated law enforcement.
+
+A notable prior work proposed an edge–cloud system that prioritized reducing server workload by performing lightweight detection on edge devices, accepting a trade-off in detection accuracy for lower computational cost and bandwidth. However, such approaches may not be suitable for scenarios where high accuracy is critical for law enforcement and public safety.
+
+In contrast, our work addresses this gap by proposing an integrated framework that leverages SRCNN for image enhancement and YOLOv8 for multi-task detection, all within a distributed edge–cloud architecture. Importantly, our approach is designed to maximize detection accuracy without sacrificing performance for the sake of server load reduction. By enhancing image quality at the edge and applying state-of-the-art detection models, our system ensures robust and reliable motorcycle safety enforcement, even in environments with limited infrastructure and low-resolution surveillance data.
+
+\section{Approaches Methods}
+\label{sec:approaches}
+
+In this section, we detail the proposed edge–cloud framework for automatic motorcycle safety enforcement, which is designed to address the challenges posed by low-resolution surveillance environments. Inspired by recent advances in distributed intelligent systems, our approach integrates image super-resolution, real-time object detection, and hierarchical data processing to ensure both accuracy and efficiency. The framework is structured into three main layers: smart cameras equipped with super-resolution capabilities at the edge, an edge server for multi-task detection and analysis, and a cloud server for centralized storage and management. Each component is optimized to balance computational load, minimize data transmission, and enable near real-time response, making the system suitable for deployment in resource-constrained urban and residential areas. The following subsections describe the architecture, data flow, and the key algorithms employed at each stage of the pipeline.
+
+\section{Experimental results}
+
+\section{CONCLUSION}
+
+\begin{thebibliography}{1}
+
+\bibitem{C. Ibe2007}
+C. Iber, “The aasm manual for the scoring of sleep and associated events:
+Rules,” Terminology and Technical Specification, 2007.
+
+\bibitem{R. Yu2025}
+R. Yu, Y. Li, K. Zhao, and F. Fan, "A review of automatic sleep stage classification using machine learning algorithms based on heart rate variability," Sleep and Biological Rhythms, vol. 23, pp. 113–125, 2025.
+
+\bibitem{P. Liu2024}
+P. Liu, W. Qian, H. Zhang, Y. Zhu, Q. Hong, Q. Li, and Y. Yao, "Automatic sleep stage classification using deep learning: signals, data representation, and neural networks," Artificial Intelligence Review, vol. 57, article no. 301, 2024.
+
+\bibitem{J. Macea2025}
+J. Macea, E. R. M. Heremans, R. Proost, M. De Vos, and W. Van Paesschen, "Automated Sleep Staging in Epilepsy Using Deep Learning on Standard Electroencephalogram and Wearable Data," Journal of Sleep Research, vol. 2025, article no. e70061, Apr. 2025
+
+\bibitem{T. R. Sri2022}
+T. R. Sri, R. R. A., J. Madala, S. L. Duddukuru, R. Reddipalli, and P. K. Polasi, "A Systematic Review on Deep Learning Models for Sleep Stage Classification," 2022 6th International Conference on Trends in Electronics and Informatics (ICOEI), Tirunelveli, India, pp. 1–6, Apr. 2022.
+
+\bibitem{H. Yue2024}
+H. Yue, Z. Chen, W. Guo, L. Sun, Y. Dai, Y. Wang, W. Ma, X. Fan, W. Wen, and W. Lei, "Research and application of deep learning-based sleep staging: Data, modeling, validation, and clinical practice," Sleep Medicine Reviews, vol. 71, article no. 101897, 2024.
+
+\bibitem{Y. Zhao2023}
+Y. Zhao, F. He, and Y. Guo, "EEG Signal Processing Techniques and Applications," Sensors, vol. 23, no. 22, article no. 9056, Nov. 2023.
+
+\bibitem{N. S. Amar2023}
+N. S. Amar and S. B. Senhoussi, "EEG Signal Processing for Medical Diagnosis, Healthcare, and Monitoring: A Comprehensive Review," IEEE Access, vol. 11, pp. 143116-143142, Dec. 2023.
+
+\bibitem{K. Makkar2023}
+K. Makkar and A. Bisen, "EEG Signal Processing and Feature Extraction," International Journal for Modern Trends in Science and Technology, vol. 9, no. 8, pp. 45-50, Oct. 2023.
+
+\end{thebibliography}
+
+
+\end{document}
