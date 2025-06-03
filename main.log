@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.29)  30 MAY 2025 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.29)  3 JUN 2025 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,8 +664,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (D:\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count347
-)
-No file main.aux.
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -686,6 +685,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
+
 -- Lines per column: 56 (exact).
 (D:\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -739,9 +739,44 @@ Underfull \hbox (badness 1540) in paragraph at lines 78--79
 
 
 
+<images/3layers.png, id=17, 423.5825pt x 683.55376pt>
+File: images/3layers.png Graphic file (type png)
+<use images/3layers.png>
+Package pdftex.def Info: images/3layers.png  used on input line 89.
+(pdftex.def)             Requested size: 252.0pt x 406.66217pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 [2]
+
+<images/srcnn.png, id=25, 797.98125pt x 220.825pt>
+File: images/srcnn.png Graphic file (type png)
+<use images/srcnn.png>
+Package pdftex.def Info: images/srcnn.png  used on input line 111.
+(pdftex.def)             Requested size: 252.0pt x 69.73544pt.
+
+
+[3 <./images/3layers.png> <./images/srcnn.png>]
+
+LaTeX Warning: Citation `Nguyen2024' on page 4 undefined on input line 169.
+
+
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 180--181
+[]$\OML/cmm/m/it/10 FN[]L$\OT1/ptm/m/n/10 : False Neg-a-tive in-stances for Li-cense Plate
+ []
+
+
+Overfull \hbox (1.36432pt too wide) detected at line 189
+[][][]\OML/cmm/m/it/10 Accuracy[] \OT1/cmr/m/n/10 = []
+ []
+
+
+
+[4]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -757,7 +792,7 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[3
+[5
 
 ] (main.aux)
  ***********
@@ -766,21 +801,21 @@ L3 programming layer <2025-03-10>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22732 strings out of 473787
- 409952 string characters out of 5737476
- 1950703 words of memory out of 5000000
- 45343 multiletter control sequences out of 15000+600000
- 588054 words of font info for 86 fonts, out of 8000000 for 9000
+ 22801 strings out of 473787
+ 411035 string characters out of 5737476
+ 1954703 words of memory out of 5000000
+ 45383 multiletter control sequences out of 15000+600000
+ 595855 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,93p,1294b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrb0900.pk><D:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (3 pages, 61602 bytes).
+ 84i,8n,93p,1294b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrb0900.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (5 pages, 230512 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
