@@ -50,11 +50,11 @@ Motorcycle safety, Super-Resolution, SRCNN, YOLOv8, Helmet detection, License pl
 \section{Introduction}
 \label{intro}
 
-Motorcycle safety is a critical concern in many developing countries, especially in Vietnam, where motorcycles are the primary mode of transportation and helmet use is mandated by law. Despite the existence of strict regulations, the rate of helmet-wearing violations and other traffic infractions remains high, contributing to a significant number of injuries and fatalities each year. The challenge of ensuring compliance with helmet laws is further exacerbated by the sheer volume of motorcycles on the road and the limited resources available for manual enforcement.
+Motorcycle safety is a critical concern in many developing countries, especially in Vietnam, where motorcycles are the primary mode of transportation and helmet use is mandated by law. Despite the existence of strict regulations, the rate of helmet-wearing violations and other traffic infractions remains high, contributing to a significant number of injuries and fatalities each year. The challenge of ensuring compliance with helmet laws is further exacerbated by the sheer volume of motorcycles on the road and the limited resources available for manual enforcement[1].
 
-In recent years, the deployment of surveillance cameras has become a common solution for traffic monitoring and law enforcement. However, in many urban and residential areas, these cameras are typically low-cost devices with limited resolution and image quality. Such limitations pose significant obstacles for automated systems, as traditional computer vision methods often fail to accurately detect helmet usage or recognize license plates in low-resolution footage. This results in missed violations, unreliable evidence, and ultimately reduces the effectiveness of automated enforcement solutions.
+In recent years, the deployment of surveillance cameras has become a common solution for traffic monitoring and law enforcement [2]-[4]. However, in many urban and residential areas, these cameras are typically low-cost devices with limited resolution and image quality. Such limitations pose significant obstacles for automated systems, as traditional computer vision methods often fail to accurately detect helmet usage or recognize license plates in low-resolution footage. This results in missed violations, unreliable evidence, and ultimately reduces the effectiveness of automated enforcement solutions[5].
 
-Advancements in deep learning and image processing have opened new opportunities to overcome these challenges. Super-Resolution techniques, such as the SRCNN model, can enhance the quality of low-resolution images, making them more suitable for subsequent analysis. Meanwhile, state-of-the-art object detection models like YOLOv8 have demonstrated impressive performance in identifying multiple classes of objects in complex and dynamic scenes, even under challenging visual conditions.
+Advancements in deep learning and image processing have opened new opportunities to overcome these challenges[6]. Super-Resolution techniques, such as the SRCNN model[7], can enhance the quality of low-resolution images, making them more suitable for subsequent analysis. Meanwhile, state-of-the-art object detection models like YOLOv8[8] have demonstrated impressive performance in identifying multiple classes of objects in complex and dynamic scenes, even under challenging visual conditions.
 
 To address the aforementioned issues, this paper proposes an edge–cloud framework that leverages recent advances in deep learning and image enhancement. The system integrates a Super-Resolution technique using the SRCNN model directly on smart cameras (edge devices) to improve the quality of captured images before transmission. Enhanced images are then sent to an Edge Server, where a YOLOv8-Large model is deployed to simultaneously detect motorcycles, helmets, and license plates, analyze helmet-wearing violations, and perform license plate recognition (OCR) if a violation is detected. All relevant information and images are subsequently transmitted to a Cloud Server for storage, management, and further processing.
 
@@ -235,33 +235,29 @@ In this paper, we proposed an edge–cloud framework for automatic motorcycle sa
 
 \begin{thebibliography}{1}
 
-\bibitem{C. Ibe2007}
-C. Iber, “The aasm manual for the scoring of sleep and associated events:
-Rules,” Terminology and Technical Specification, 2007.
+\bibitem{Mahmud2016}
+S. M. S. Mahmud, L. Ferreira, and A. Tavassoli Hojati, “Traditional Approaches to Traffic Safety Evaluation (TSE): Application Challenges and Future Directions,” in 11th Asia Pacific Transportation Development Conference and 29th ICTPA Annual Conference, May 2016.
 
-\bibitem{R. Yu2025}
-R. Yu, Y. Li, K. Zhao, and F. Fan, "A review of automatic sleep stage classification using machine learning algorithms based on heart rate variability," Sleep and Biological Rhythms, vol. 23, pp. 113–125, 2025.
+\bibitem{IC3I2022}
+2022 5th International Conference on Contemporary Computing and Informatics (IC3I), Uttar Pradesh, India, Dec. 14–16, 2022.
 
-\bibitem{P. Liu2024}
-P. Liu, W. Qian, H. Zhang, Y. Zhu, Q. Hong, Q. Li, and Y. Yao, "Automatic sleep stage classification using deep learning: signals, data representation, and neural networks," Artificial Intelligence Review, vol. 57, article no. 301, 2024.
+\bibitem{ICNDC2013}
+2013 Fourth International Conference on Networking and Distributed Computing (ICNDC), Los Angeles, CA, USA, Dec. 21–24, 2013.
 
-\bibitem{J. Macea2025}
-J. Macea, E. R. M. Heremans, R. Proost, M. De Vos, and W. Van Paesschen, "Automated Sleep Staging in Epilepsy Using Deep Learning on Standard Electroencephalogram and Wearable Data," Journal of Sleep Research, vol. 2025, article no. e70061, Apr. 2025
+\bibitem{COMSNETS2021}
+2021 International Conference on COMmunication Systems \& NETworkS (COMSNETS), Bangalore, India, Jan. 5–9, 2021.
 
-\bibitem{T. R. Sri2022}
-T. R. Sri, R. R. A., J. Madala, S. L. Duddukuru, R. Reddipalli, and P. K. Polasi, "A Systematic Review on Deep Learning Models for Sleep Stage Classification," 2022 6th International Conference on Trends in Electronics and Informatics (ICOEI), Tirunelveli, India, pp. 1–6, Apr. 2022.
+\bibitem{Hossain2024}
+M. T. Hossain, A. Zaman, M. R. Abir, S. Akter, S. Mursalin, and S. S. Khan, “Synchronizing Object Detection: Applications, Advancements and Existing Challenges,” IEEE Access, 2024.
 
-\bibitem{H. Yue2024}
-H. Yue, Z. Chen, W. Guo, L. Sun, Y. Dai, Y. Wang, W. Ma, X. Fan, W. Wen, and W. Lei, "Research and application of deep learning-based sleep staging: Data, modeling, validation, and clinical practice," Sleep Medicine Reviews, vol. 71, article no. 101897, 2024.
+\bibitem{Nguyen2024}
+H. D. Nguyen Thanh, P. N. Ngoc Thien, N. P. Duc, A. N. Phan Tuan, and N. L. Dinh, “Enhancing Helmet Violation Detection and License Plate Recognition through Optimization of YOLOV8 Models with Edge Computing Integration,” in Proceedings of the 2024 9th International Conference on Intelligent Information Technology (ICIIT), pp. 82–85, July 2024.
 
-\bibitem{Y. Zhao2023}
-Y. Zhao, F. He, and Y. Guo, "EEG Signal Processing Techniques and Applications," Sensors, vol. 23, no. 22, article no. 9056, Nov. 2023.
+\bibitem{Dong2014}
+C. Dong, C. C. Loy, K. He, and X. Tang, “Image Super-Resolution Using Deep Convolutional Networks,” arXiv:1501.00092 [cs.CV], 2014.
 
-\bibitem{N. S. Amar2023}
-N. S. Amar and S. B. Senhoussi, "EEG Signal Processing for Medical Diagnosis, Healthcare, and Monitoring: A Comprehensive Review," IEEE Access, vol. 11, pp. 143116-143142, Dec. 2023.
-
-\bibitem{K. Makkar2023}
-K. Makkar and A. Bisen, "EEG Signal Processing and Feature Extraction," International Journal for Modern Trends in Science and Technology, vol. 9, no. 8, pp. 45-50, Oct. 2023.
+\bibitem{Redmon2016}
+J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, “You Only Look Once: Unified, Real-Time Object Detection,” arXiv:1506.02640 [cs.CV], 2016.
 
 \end{thebibliography}
 

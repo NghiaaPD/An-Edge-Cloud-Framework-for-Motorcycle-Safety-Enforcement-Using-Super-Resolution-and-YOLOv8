@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1748949923.91092 "d:/codeN/Paper/An_Edge–Cloud_Framework_for_Motorcycle_Safety_Enforcement_Using_Super-Resolution_and_YOLOv8/main.tex" "main.pdf" "main" 1748949925.31102 2
+["pdflatex"] 1749183188.08258 "d:/codeN/Paper/An_Edge–Cloud_Framework_for_Motorcycle_Safety_Enforcement_Using_Super-Resolution_and_YOLOv8/main.tex" "main.pdf" "main" 1749183189.5585 2
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1748513224 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrb0900.pk" 1748517860 9904 043109d4e8d0dc52d078e558b4d8ad5c ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1748520476 11548 7a8c2c1dc37ba1c94195fd2e872eba05 ""
@@ -160,11 +160,11 @@
   "D:/MiKTeX/tex/latex/tools/calc.sty" 1730400552 10214 61188260d324e94bc2f66825d7d3fdf4 ""
   "D:/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/codeN/Paper/An_Edge–Cloud_Framework_for_Motorcycle_Safety_Enforcement_Using_Super-Resolution_and_YOLOv8/main.tex" 1748949923 25288 b98eaff5cc99cdc703e034bb18e484a2 ""
+  "d:/codeN/Paper/An_Edge–Cloud_Framework_for_Motorcycle_Safety_Enforcement_Using_Super-Resolution_and_YOLOv8/main.tex" 1749183186 24854 a8eae1115a381ab55866eda622573a19 ""
   "images/3layers.png" 1748924403 52440 f6477f0afa383c8b7be46718afb6d92c ""
   "images/srcnn.png" 1748948562 651358 fd6f53ed6df19f70cd8c4e15449eb0ad ""
-  "main.aux" 1748949925 3741 a662fe971840aed16d48644a0a3b2608 "pdflatex"
-  "main.tex" 1748949923 25288 b98eaff5cc99cdc703e034bb18e484a2 ""
+  "main.aux" 1749183189 3703 57a6b168d80cbb672fe992e956b4549d "pdflatex"
+  "main.tex" 1749183186 24854 a8eae1115a381ab55866eda622573a19 ""
   (generated)
   "main.aux"
   "main.log"
